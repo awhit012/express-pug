@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1= "Users"
+	ul
+	each user in users
+		li 
+			a(href='/users/' + user._id)=user.name
+			a(href='/users/' + user._id + '/delete')=" [x]"
+
+	br
+	a(href='/users/new') New User

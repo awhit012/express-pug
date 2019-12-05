@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	form(method='POST' action='/users')
+		div.form-group
+			label(for='name') Name:
+			input#name.form-control(type='text', placeholder='first' name='name')
+		div.form-group
+			label(for='title') Title:
+			input#title.form-control(type='text', placeholder='title' name='title')
+		button.btn.btn-primary(type='submit') Sign up

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	form(method='POST' action='/users/editUser')
+		div.form-group
+			label(for='name') Name:
+			input#name.form-control(type='text', value=user.name name='name')
+		div.form-group
+			label(for='title') Title:
+			input#title.form-control(type='text', value=user.title name='title')
+		div.form-group
+			input(type="hidden" name="_id" value=user._id)
+
+		button.btn.btn-primary(type='submit') Edit
